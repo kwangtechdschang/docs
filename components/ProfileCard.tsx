@@ -86,9 +86,9 @@ export const ProfileCard: FC<ProfileCardProps> = ({
           <Image
             src={avatar}
             alt={name}
-            width={200}
-            height={200}
-            className="rounded-full object-fill"
+            width={96}
+            height={96}
+            className="rounded-full object-cover w-24 h-24"
           />
         ) : (
           <Avatar
@@ -100,8 +100,17 @@ export const ProfileCard: FC<ProfileCardProps> = ({
           />
         )}
       </div>
-      <p className="text-lg font-semibold text-gray-800 dark:text-white">{name}</p>
-      {role && <Link href={profile_card_link} className="text-md">{role}</Link>}
+      <p className="text-lg font-semibold text-gray-900 dark:text-white leading-snug">
+        {name}
+      </p>
+      {role && (
+        <Link
+          href={profile_card_link}
+          className="mt-1 text-sm font-medium text-teal-600 dark:text-teal-300"
+        >
+          {role}
+        </Link>
+      )}
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         {links.map((link, idx) => (
           <a

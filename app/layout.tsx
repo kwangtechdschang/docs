@@ -46,10 +46,10 @@ const navbar = (
   <Navbar
     logo={
       <div>
-        <Image src="/prisma-name-text-dark.svg" width={140} height={60} alt="Prisma Logo" />
+        <Image src="/kwangtechlogo.png" width={140} height={60} alt="Kwang Tech Hub Logo" />
       </div>
     }
-    logoLink={"https://www.prisma.events/"}
+    logoLink={"/"}
     chatIcon={<FaTelegramPlane className={`${iconClasses} ${getRandomHoverColor()}`} />}
     chatLink={"https://t.me/+9-UF8k9H8dBjNWFk"}
     children={
@@ -87,7 +87,7 @@ const navbar = (
   />
 );
 
-const footer = <Footer>Prisma © {new Date().getFullYear()}</Footer>
+const footer = <Footer>Kwang Tech Hub &copy; {new Date().getFullYear()}</Footer>
 
 export default async function RootLayout({
   children,

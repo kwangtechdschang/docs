@@ -17,16 +17,16 @@ const flattenPages = (pages: any[]): PageMapItem[] =>
   }, [] as PageMapItem[]);
 
 export async function generateMetadata({ params }: { params: { mdxPath?: string[] } }) {
-  const title = params?.mdxPath?.join(" ") || "Prisma Docs";
-  const url = `https://docs.prisma.events/${params?.mdxPath?.join("/") || ""}`;
-  const image = `https://docs.prisma.events/api/og?title=${encodeURIComponent(title)}`;
+  const title = params?.mdxPath?.join(" ") || "Kwang Tech Hub Docs";
+  const url = `https://docs.kwangtech.com.cm/${params?.mdxPath?.join("/") || ""}`;
+  const image = `https://docs.kwangtech.com.cm/api/og?title=${encodeURIComponent(title)}`;
 
   const pageMap = await getPageMap();
   const flatPages = flattenPages(pageMap);
   const route = `/${params?.mdxPath?.join("/") || ""}`;
   const currentPage = flatPages.find((page) => page.route === route);
 
-  let description = "Read more in the Prisma documentation.";
+  let description = "Read more in the Kwang Tech Hub Docs documentation.";
   if (currentPage?.frontMatter?.description) {
     description = currentPage.frontMatter.description;
   } else if (currentPage?.content) {
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: { mdxPath?: string[
       title,
       description,
       url,
-      siteName: "Prisma Docs",
+      siteName: "Kwang Tech Hub Docs",
       images: [{ url: image }],
       type: "website",
     },
