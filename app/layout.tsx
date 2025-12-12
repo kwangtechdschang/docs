@@ -6,7 +6,6 @@ import '@/styles.css';
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import { Analytics } from "@vercel/analytics/react";
-import { generateMetadata } from './utils/metadata';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaTelegramPlane, FaGithub } from "react-icons/fa";
 import { BsCalendarWeek } from "react-icons/bs";
@@ -91,35 +90,42 @@ const footer = <Footer>Kwang Tech Hub &copy; {new Date().getFullYear()}</Footer>
 
 export default async function RootLayout({
   children,
-  params,
 }: {
   children: ReactNode;
-  params: { mdxPath?: string[] };
 }) {
-  const metadata = await generateMetadata({ params }); // Generate dynamic metadata
+  const pageMap = await getPageMap();
 
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        {/* OpenGraph Meta Tags */}
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        <title>Kwang Tech Hub Docs</title>
+        <meta
+          name="description"
+          content="Documentation for Kwang Tech Hub in Dschang, West Region, Cameroon. Learn about our mission, vision, values, practices, collaborators, and projects."
+        />
+        {/* Basic OpenGraph Meta Tags */}
+        <meta property="og:title" content="Kwang Tech Hub Docs" />
+        <meta
+          property="og:description"
+          content="Documentation for Kwang Tech Hub in Dschang, West Region, Cameroon. Learn about our mission, vision, values, practices, collaborators, and projects."
+        />
+        <meta property="og:url" content="https://docs.kwangtech.com.cm/" />
+        <meta property="og:site_name" content="Kwang Tech Hub Docs" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://docs.kwangtech.com.cm/social_card.png" />
+        {/* Basic Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kwang Tech Hub Docs" />
+        <meta
+          name="twitter:description"
+          content="Documentation for Kwang Tech Hub in Dschang, West Region, Cameroon. Learn about our mission, vision, values, practices, collaborators, and projects."
+        />
+        <meta name="twitter:image" content="https://docs.kwangtech.com.cm/social_card.png" />
       </Head>
       <body>
         <Layout
           navbar={navbar}
-          pageMap={await getPageMap()}
+          pageMap={pageMap}
           docsRepositoryBase="https://github.com/prisma-collective/docs"
           footer={footer}
           sidebar={{ autoCollapse: true, defaultMenuCollapseLevel: 1 }}
