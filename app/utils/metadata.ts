@@ -18,8 +18,8 @@ const flattenPages = (pages: any[]): PageMapItem[] =>
 
 export async function generateMetadata({ params }: { params: { mdxPath?: string[] } }) {
   const title = params?.mdxPath?.join(" ") || "Kwang Tech Hub Docs";
-  const url = `https://docs.kwangtech.com.cm/${params?.mdxPath?.join("/") || ""}`;
-  const image = `https://docs.kwangtech.com.cm/api/og?title=${encodeURIComponent(title)}`;
+  const url = `https://kwangtech.vercel.app/${params?.mdxPath?.join("/") || ""}`;
+  const image = `https://kwangtech.vercel.app/api/og?title=${encodeURIComponent(title)}`;
 
   const pageMap = await getPageMap();
   const flatPages = flattenPages(pageMap);

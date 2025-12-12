@@ -109,10 +109,10 @@ export default async function RootLayout({
           property="og:description"
           content="Documentation for Kwang Tech Hub in Dschang, West Region, Cameroon. Learn about our mission, vision, values, practices, collaborators, and projects."
         />
-        <meta property="og:url" content="https://docs.kwangtech.com.cm/" />
+        <meta property="og:url" content="https://kwangtech.vercel.app/" />
         <meta property="og:site_name" content="Kwang Tech Hub Docs" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://docs.kwangtech.com.cm/social_card.png" />
+        <meta property="og:image" content="https://kwangtech.vercel.app/social_card.png" />
         {/* Basic Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kwang Tech Hub Docs" />
@@ -120,7 +120,7 @@ export default async function RootLayout({
           name="twitter:description"
           content="Documentation for Kwang Tech Hub in Dschang, West Region, Cameroon. Learn about our mission, vision, values, practices, collaborators, and projects."
         />
-        <meta name="twitter:image" content="https://docs.kwangtech.com.cm/social_card.png" />
+        <meta name="twitter:image" content="https://kwangtech.vercel.app/social_card.png" />
       </Head>
       <body>
         <Layout
