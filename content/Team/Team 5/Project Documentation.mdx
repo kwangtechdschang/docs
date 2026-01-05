@@ -11,7 +11,7 @@
 
 ---
 
-# Demo images
+# Demo Images
 
 <div
   style={{
@@ -28,13 +28,19 @@
     <img
       key={i}
       src={url}
-      alt={`Hackathon Image ${i + 1}`}
-      style={{ display: "block", margin: "0 auto", maxWidth: "600px", width: "100%", borderRadius: "8px" }}
+      alt={`Demo Image ${i + 1}`}
+      style={{
+        maxWidth: "600px",
+        width: "100%",
+        maxHeight: "400px",
+        height: "auto",
+        borderRadius: "8px"
+      }}
     />
   ))}
 </div>
 
-# Images 
+# Gallery Images
 
 <div
   style={{
@@ -51,8 +57,14 @@
     <img
       key={i}
       src={url}
-      alt={`Hackathon Image ${i + 1}`}
-      style={{ display: "block", margin: "0 auto", maxWidth: "600px", width: "100%", borderRadius: "8px" }}
+      alt={`Gallery Image ${i + 1}`}
+      style={{
+        maxWidth: "600px",
+        width: "100%",
+        maxHeight: "400px",
+        height: "auto",
+        borderRadius: "8px"
+      }}
     />
   ))}
 </div>
