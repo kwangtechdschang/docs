@@ -6,3 +6,4 @@ _pagefind/
 .env*
 scripts/*.json
 .env.local
+txt
