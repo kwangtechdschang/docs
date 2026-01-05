@@ -10,3 +10,62 @@
 5. [File 5](https://drive.google.com/file/d/1c2TMTeJmRRcU-1A2WQoWHPC9FU4vg-_a/view?usp=drive_link)
 
 ---
+
+# Demo images
+
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "10px"
+  }}
+>
+  {[
+  "https://lh3.googleusercontent.com/d/150z9N54n266LpG5lwE6E609t0_rAQLnG",
+  "https://lh3.googleusercontent.com/d/1jVRk8aK0zJpeo96akBwZlodEKj74pMLU"
+  ].map((url, i) => (
+    <img
+      key={i}
+      src={url}
+      alt={`Hackathon Image ${i + 1}`}
+      style={{
+        maxWidth: "200px",  // limite la largeur
+        width: "100%",       // responsive
+        height: "auto",      // garde le ratio
+        borderRadius: "8px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
+      }}
+    />
+  ))}
+</div>
+
+
+# Images
+
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "10px"
+  }}
+>
+  {[
+  "https://lh3.googleusercontent.com/d/1Lew5JhCQQ_tirBPRCNc5iOcrQf3Uo7EA",
+  "https://lh3.googleusercontent.com/d/1dl9-hRz3vH8RgRTmMrl3IzeKFwki6DCO"
+  ].map((url, i) => (
+    <img
+      key={i}
+      src={url}
+      alt={`Hackathon Image ${i + 1}`}
+      style={{
+        maxWidth: "200px",  // limite la largeur
+        width: "100%",       // responsive
+        height: "auto",      // garde le ratio
+        borderRadius: "8px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
+      }}
+    />
+  ))}
+</div>
