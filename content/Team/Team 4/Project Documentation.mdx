@@ -37,10 +37,9 @@
       src={url}
       alt={`Hackathon Image ${i + 1}`}
       style={{
-        width: "200px",       // largeur fixe
-        height: "auto",       // hauteur proportionnelle
-        maxHeight: "150px",   // limite la hauteur pour les images très longues
-        objectFit: "cover",   // coupe légèrement si trop grande
+        maxWidth: "200px",  // limite la largeur
+        width: "100%",       // responsive
+        height: "auto",      // garde le ratio
         borderRadius: "8px",
         boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
       }}
